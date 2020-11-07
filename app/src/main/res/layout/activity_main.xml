@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="CLICK ON THE PICTURE TO PLACE ORDER OF THE ITEM"
+        android:gravity="center_horizontal"
+
+        android:padding="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_orange_light"
+        android:textSize="22sp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/price_text_view">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pav_bhaji"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+             android:src="@drawable/pav_bhaji"
+            android:onClick="pbOrder"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vada_pav"
+           android:layout_margin="2dp"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:src="@drawable/vada_pav"
+            android:onClick="vpOrder"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pani_puri"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pani_puri"
+            android:onClick="ppOrder"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bhel"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bhel"
+            android:onClick="bhOrder"/>
+    </LinearLayout>
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pv_price"
+            android:text="30 ₹"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vp_price"
+            android:text="12 ₹"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 ₹"
+            android:id="@+id/pp_price"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@id/price_text_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 ₹"
+            android:id="@+id/bh_price"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/price_text_view"/>
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_green_light"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:text="ORDER"
+            android:onClick="placeOrder" />
+        <Button
+            android:id="@+id/reorder_button"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_green_light"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@android:dimen/app_icon_size"
+            android:layout_alignParentRight="true"
+            android:text="REORDER"
+            android:onClick="reOrder" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Price will be displayed here once the order is placed"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="16dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/price_text_view"
+            android:paddingBottom="16dp"
+            android:background="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
